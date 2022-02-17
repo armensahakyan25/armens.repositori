@@ -1,0 +1,65 @@
+#1. Գրել ծրագիր, որը օգտագործողից հարցնում է աշխատանքային ժամերի քանակը, մեկ ժամի դրույքաչափը և հաշվում աշխատավարձը:
+#Oրինակ.
+#     Enter Hours: 35
+#     Enter Rate: 2.75
+#     Pay: 96.25
+
+
+working_hours_number=float(input("Enter the number of working hours:"))
+rate=float(input("enter the rate:"))
+print(working_hours_number*rate)
+
+
+#Գրել ծրագիր, որն անընդհատ ընդունում է թվեր մինչև օգտագործողը մուտքագրում է «done»: «done» մուտքագրելուց հետո տպել մուտքագրված թվերի գումարը, քանակը,և միջին թվաբանականը: Եթե օգտագործողը մուտքագրում է այլ բան թվի փոխարեն, տպել հաղորդագրություն սխալ մուտքի մասին և սպասել հաջորդ թվին: 
+#   	Enter a number: 4
+#  	Enter a number: 5
+# 	Enter a number: bad data
+#	Invalid input
+#	Enter a number: 7
+#   Enter a number: done
+#16 3 5.333333333333333
+
+
+summ=0
+num=0
+
+while True:
+   a=(input("enter a number:  "))
+   if a=="done":
+     print("the summ of nubers is ",summ)
+     print("the quantity of number is ",num)
+     print("the arithmetic average of nubers is ", summ/num)
+     break
+   b=int(a)
+   summ+=b 
+   num+=1
+
+   #3. Գրել ծրագիր, որը օգտագործողից որպես մուտքային տվյալ կստանա տառ և կտպի հաղորդագրություն, տառը ձայնավոր է,
+  #բաղաձայն, թե և՜ ձայնավոր, և՜ բաղաձայն: Ձայնավոր են a, e, i, o, u տառերը, y-ը և՜ ձայնավոր է, և՜ բաղաձայն, մնացածը՝ բաղաձայն:
+
+
+while True:
+    a=input("enter the letter: ")
+    if a in ('a','e','i','o','u'):
+        print("the '",a,"' is vocals")
+    else:
+        print("the '",a,"' is not vocal")
+
+
+ # 4 Գրել ծրագիր, որը կստանա շախմատի վանդակի կոորդինատները և կտպի վանդակի գույնը։ 
+
+x=(input("enter the 'x' cordinat: "))
+y=int(input("enter the 'y' cordinat: "))
+add={'a':1,'b':2,'c':3,'d':4,'e':5,'f':6,'g':7,'h':8}
+if ((add[str(x)])*y)%2==1:
+    print("Black")
+else:
+    print("White")
+
+
+
+#5. Ստեղծել ծրագիր, որը օգտագործողից կստանա ջերմաստիճան ըստ Ֆարենհայտի և կտպի համապատասխան ջերմաստիճանը
+#արտահայտված ըստ Ցելսիուսի։ Ֆարենհայտից Ցելսիուսի փոխարկման բանաձևը՝ °C = (°F - 32)/1.8։
+
+f=float(input("enter the temperature in farenhite: "))
+print("the temperature in celsius is: ",(f - 32)/(1.8))
