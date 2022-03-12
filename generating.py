@@ -1,9 +1,9 @@
 
-def multi(d,l):#դարձնում է լիստ
+def multi(d):#դարձնում է լիստ
     for i in d:
         for j in range(d[i]):
-            l.append(i)
-    return l
+            print(i,end=" ")
+    return 0
 
 
 
@@ -27,8 +27,4 @@ d={29: 1023000, 98: 10075000, 70: 10056000, 4: 10076000, 23: 9970000, 71: 102320
  1: 1002700, 7: 990000, 76: 10088000, 24: 9915000, 74: 10056000, 89: 10166000, 41: 9926000, 10: 1002600, 90: 9968000,
  47: 9985000}
 print("Numbers count is:  ", + gumar(d),end="\n")
-l=[]
-multi(d,l)
-print("numbers is: ",+ multi(d,l))
-
-
+print("numbers is: ",+ multi(d))
